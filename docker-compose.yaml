@@ -30,8 +30,6 @@ services:
         use_external_ip: true
         logging:
           level: debug
-        flood_protection:
-          enabled: false
 
 volumes:
   redis_data:
