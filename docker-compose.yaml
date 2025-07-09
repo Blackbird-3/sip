@@ -16,7 +16,7 @@ services:
         redis:
             condition: service_started
   sip:
-    image: livekit/sip
+    image: livekit/sip-gateway
     network_mode: host
     environment:
       SIP_CONFIG_BODY: |
@@ -30,5 +30,8 @@ services:
         use_external_ip: true
         logging:
           level: debug
+        flood_protection:
+          enabled: false
+
 volumes:
   redis_data:
