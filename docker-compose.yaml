@@ -16,7 +16,7 @@ services:
         redis:
             condition: service_started
   sip:
-    image: livekit/sip-gateway
+    image: livekit/sip
     network_mode: host
     environment:
       SIP_CONFIG_BODY: |
